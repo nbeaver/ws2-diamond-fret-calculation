@@ -5,8 +5,6 @@ PDF   :=$(patsubst %.ipynb,%.pdf, $(IPYNB))
 
 ZIP := fret_calculation.zip
 
-
-
 .PHONY: all
 all : $(HTML) $(PY) $(PDF)
 
