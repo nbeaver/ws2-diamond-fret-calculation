@@ -8,6 +8,14 @@ ZIP := fret_calculation.zip
 .PHONY: all
 all : $(HTML) $(PY) $(PDF)
 
+.PHONY: ipython-notebook
+ipython-notebook:
+	jupyter notebook
+
+.PHONY: jupyter-notebook
+jupyter-notebook:
+	jupyter notebook
+
 %.html : %.ipynb
 	jupyter nbconvert --to html $<
 
