@@ -2,6 +2,6 @@
 *.pdf
 WS2_NV-_center_FRET_estimation.py
 WS2_NV-_center_FRET_estimation.html
-FRET_estimation-test.py
-FRET_estimation-test.html
+FRET_estimation_known_dyes.html
+FRET_estimation_known_dyes.py
 .ipynb_checkpoints/
