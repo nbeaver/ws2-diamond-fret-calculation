@@ -33,6 +33,12 @@ clean :
 .PHONY: zip
 zip : $(ZIP)
 
+
+.PHONY: known_dyes_fret_calculation.zip
+known_dyes_fret_calculation.zip : .gitignore FRET_estimation_known_dyes.ipynb ATTO_390_emission.csv ATTO_425_absorption.csv FPbase_FRET_Calculator.png
+	zip --filesync --quiet $@ $^
+
+
 .PHONY: $(ZIP)
 $(ZIP): Makefile .gitignore WS2_NV-_center_FRET_estimation.ipynb Makefile NV_center_absorption.txt WS2_emission.txt
 	zip --filesync --quiet $@ $^
