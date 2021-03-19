@@ -13,6 +13,13 @@ def main():
     plt.savefig("NV_center_spectrum.png")
     plt.clf()
 
+    hc = 1239.8 # eV nm
+    x_eV = hc/x # eV
+    plt.scatter(x_eV, y)
+    plt.xlabel("Photon wavelength (eV)")
+    plt.ylabel("Emission intensity (a.u.)")
+    plt.savefig("NV_center_spectrum_eV.png")
+
 
 if __name__ == '__main__':
     main()
