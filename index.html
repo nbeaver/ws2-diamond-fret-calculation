@@ -12591,7 +12591,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Estimation-of-FRET-efficiency-for-emission-from-WS2-and-absorption-by-diamond-NV--center.">Estimation of FRET efficiency for emission from WS2 and absorption by diamond NV- center.<a class="anchor-link" href="#Estimation-of-FRET-efficiency-for-emission-from-WS2-and-absorption-by-diamond-NV--center.">&#182;</a></h1><p>Based on Medintz &amp; Hildebrandt, 2014, pages 23-31.</p>
+<h1 id="Estimation-of-FRET-efficiency-for-emission-from-WS2-and-absorption-by-diamond-NV--center.">Estimation of FRET efficiency for emission from WS2 and absorption by diamond NV- center.<a class="anchor-link" href="#Estimation-of-FRET-efficiency-for-emission-from-WS2-and-absorption-by-diamond-NV--center.">&#182;</a></h1><p>Based on <a href="https://books.google.com/books/about/FRET_F%C3%B6rster_Resonance_Energy_Transfer.html?id=GXWAAQAAQBAJ">Medintz &amp; Hildebrandt, 2014</a>, pages 23-31, and <a href="https://doi.org/10.1006/abio.1994.1134">Wu &amp; Brand et al., 1994</a>, page 3.</p>
 <p>FRET efficiency, $E$, is
 $$
 E = \frac{R_0^6}{R_0^6 + r_{DA}^6}
@@ -12644,6 +12644,20 @@ J^\lambda = J = \int f_D(\lambda) \epsilon_A(\lambda) \lambda^4 \mathrm{d} \lamb
 $$
 where $f_D(\lambda)$ is the fluorescence spectrum of the donor,
 $\epsilon_A(\lambda)$ is the molar extinction coefficient (a.k.a. molar absorptivity) of the acceptor (usually in units of $\mathrm{M}^{-1} \mathrm{cm}^{-1}$), and $\lambda$ is the wavelength (usually in nm).</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>As a discrete sum, $J$ is computed as
+$$
+J = \frac{\sum_i F_D(\lambda_i) \epsilon_A(\lambda_i) \lambda_i^4}{\sum_i F_D(\lambda_i)}
+$$
+where $F_D(\lambda_i)$ is the intensity of the donor spectrum at $\lambda_i$ (it need not be normalized),
+$\epsilon_A(\lambda_i)$ is the molar attenuation coefficient at $\lambda_i$, and $\lambda_i$ is the wavelength.</p>
 
 </div>
 </div>
@@ -13549,6 +13563,15 @@ $$</p>
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Github repo: <a href="https://github.com/nbeaver/ws2-diamond-fret-calculation">https://github.com/nbeaver/ws2-diamond-fret-calculation</a></p>
+
+</div>
+</div>
 </div>
     </div>
   </div>
