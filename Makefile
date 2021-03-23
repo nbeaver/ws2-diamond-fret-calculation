@@ -1,5 +1,5 @@
-IPYNB :=$(wildcard *.ipynb)
-HTML  :=$(patsubst %.ipynb,%.html, $(IPYNB))
+IPYNB :=WS2_NV-_center_FRET_estimation.ipynb
+HTML  :=index.html
 PY    :=$(patsubst %.ipynb,%.py, $(IPYNB))
 PDF   :=$(patsubst %.ipynb,%.pdf, $(IPYNB))
 
@@ -16,13 +16,13 @@ ipython-notebook:
 jupyter-notebook:
 	jupyter notebook
 
-%.html : %.ipynb
-	jupyter nbconvert --to html $<
+$(HTML) : $(IPYNB)
+	jupyter nbconvert --to html $< --stdout > $@
 
-%.pdf : %.ipynb
+$(PDF) : $(IPYNB)
 	jupyter nbconvert --to pdf $<
 
-%.py : %.ipynb
+$(PY) : $(IPYNB)
 	jupyter nbconvert --to script $<
 
 
