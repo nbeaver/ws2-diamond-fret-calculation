@@ -12664,7 +12664,7 @@ $\epsilon_A(\lambda_i)$ is the molar attenuation coefficient at $\lambda_i$, and
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
@@ -12688,7 +12688,7 @@ $\epsilon_A(\lambda_i)$ is the molar attenuation coefficient at $\lambda_i$, and
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[35]:</div>
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">WS2_eV</span><span class="p">,</span> <span class="n">WS2_intensity</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span><span class="s2">&quot;WS2_emission.txt&quot;</span><span class="p">,</span> <span class="n">unpack</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -12727,7 +12727,7 @@ $\epsilon_A(\lambda_i)$ is the molar attenuation coefficient at $\lambda_i$, and
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[34]:</div>
+<div class="prompt input_prompt">In&nbsp;[32]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">hc</span> <span class="o">=</span> <span class="mf">1239.8</span> <span class="c1"># eV nm</span>
@@ -12776,7 +12776,7 @@ $\epsilon_A(\lambda_i)$ is the molar attenuation coefficient at $\lambda_i$, and
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[31]:</div>
+<div class="prompt input_prompt">In&nbsp;[33]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">nv_center_emission_nm</span><span class="p">,</span> <span class="n">nv_center_emission_intensity</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span><span class="s2">&quot;NV_center_emission.txt&quot;</span><span class="p">,</span> <span class="n">unpack</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -12825,7 +12825,7 @@ $\epsilon_A(\lambda_i)$ is the molar attenuation coefficient at $\lambda_i$, and
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[34]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">IPython</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s2">&quot;nv-center-excitation-spectrum/fig7.png&quot;</span><span class="p">)</span>
@@ -12841,7 +12841,7 @@ $\epsilon_A(\lambda_i)$ is the molar attenuation coefficient at $\lambda_i$, and
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[5]:</div>
+<div class="prompt output_prompt">Out[34]:</div>
 
 
 
@@ -12889,7 +12889,7 @@ $\epsilon_A(\lambda_i)$ is the molar attenuation coefficient at $\lambda_i$, and
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[35]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">nv_center_absorption_nm</span> <span class="o">=</span> <span class="mi">637</span> <span class="o">-</span> <span class="p">(</span><span class="n">nv_center_emission_nm</span> <span class="o">-</span> <span class="mi">637</span><span class="p">)</span>
@@ -12902,7 +12902,7 @@ $\epsilon_A(\lambda_i)$ is the molar attenuation coefficient at $\lambda_i$, and
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[33]:</div>
+<div class="prompt input_prompt">In&nbsp;[36]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">clf</span><span class="p">()</span>
@@ -12953,7 +12953,7 @@ $\epsilon_A(\lambda_i)$ is the molar attenuation coefficient at $\lambda_i$, and
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[37]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">IPython</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s2">&quot;NVple.JPG&quot;</span><span class="p">)</span>
@@ -12969,7 +12969,7 @@ $\epsilon_A(\lambda_i)$ is the molar attenuation coefficient at $\lambda_i$, and
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[8]:</div>
+<div class="prompt output_prompt">Out[37]:</div>
 
 
 
@@ -12997,7 +12997,7 @@ $\epsilon_A(\lambda_i)$ is the molar attenuation coefficient at $\lambda_i$, and
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[38]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">i_closest_to_532nm</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="mi">532</span> <span class="o">-</span> <span class="n">nv_center_absorption_nm</span><span class="p">)</span><span class="o">.</span><span class="n">argmin</span><span class="p">()</span>
@@ -13012,7 +13012,7 @@ $\epsilon_A(\lambda_i)$ is the molar attenuation coefficient at $\lambda_i$, and
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[36]:</div>
+<div class="prompt input_prompt">In&nbsp;[39]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">clf</span><span class="p">()</span>
@@ -13063,7 +13063,7 @@ $\epsilon_A(\lambda_i)$ is the molar attenuation coefficient at $\lambda_i$, and
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[37]:</div>
+<div class="prompt input_prompt">In&nbsp;[40]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">clf</span><span class="p">()</span>
@@ -13111,7 +13111,7 @@ $\epsilon_A(\lambda_i)$ is the molar attenuation coefficient at $\lambda_i$, and
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[41]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">overlap_OLI</span><span class="p">(</span>
@@ -13169,7 +13169,7 @@ $\epsilon_A(\lambda_i)$ is the molar attenuation coefficient at $\lambda_i$, and
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[42]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">nv_center_absorption_cross_section</span> <span class="o">=</span> <span class="mf">3.1e-17</span> <span class="c1"># cm^2/defect</span>
@@ -13205,7 +13205,7 @@ $\epsilon_A(\lambda_i)$ is the molar attenuation coefficient at $\lambda_i$, and
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[43]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">lambda_J</span><span class="p">,</span> <span class="n">J_OLI</span> <span class="o">=</span> <span class="n">overlap_OLI</span><span class="p">(</span>
@@ -13223,7 +13223,7 @@ $\epsilon_A(\lambda_i)$ is the molar attenuation coefficient at $\lambda_i$, and
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="prompt input_prompt">In&nbsp;[44]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">J_sum_OLI</span> <span class="o">=</span> <span class="n">J_OLI</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
@@ -13255,7 +13255,7 @@ $\epsilon_A(\lambda_i)$ is the molar attenuation coefficient at $\lambda_i$, and
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[38]:</div>
+<div class="prompt input_prompt">In&nbsp;[45]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">clf</span><span class="p">()</span>
@@ -13293,7 +13293,7 @@ $\epsilon_A(\lambda_i)$ is the molar attenuation coefficient at $\lambda_i$, and
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[39]:</div>
+<div class="prompt input_prompt">In&nbsp;[46]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">clf</span><span class="p">()</span>
@@ -13334,7 +13334,7 @@ $\epsilon_A(\lambda_i)$ is the molar attenuation coefficient at $\lambda_i$, and
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[40]:</div>
+<div class="prompt input_prompt">In&nbsp;[47]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">clf</span><span class="p">()</span>
@@ -13382,7 +13382,7 @@ $\epsilon_A(\lambda_i)$ is the molar attenuation coefficient at $\lambda_i$, and
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="prompt input_prompt">In&nbsp;[48]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">forster_distance_OLI</span><span class="p">(</span><span class="n">kappa2</span><span class="p">,</span> <span class="n">Phi_D</span><span class="p">,</span> <span class="n">J</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
@@ -13414,7 +13414,7 @@ $$</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[48]:</div>
+<div class="prompt input_prompt">In&nbsp;[49]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">kappa2</span> <span class="o">=</span> <span class="mf">2.</span><span class="o">/</span><span class="mi">3</span> <span class="c1"># orientation factor for dipole interaction</span>
@@ -13469,7 +13469,7 @@ $$</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="prompt input_prompt">In&nbsp;[50]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">FRET_efficiency</span><span class="p">(</span><span class="n">R_0</span><span class="p">,</span> <span class="n">r_DA</span><span class="p">):</span>
@@ -13495,7 +13495,7 @@ $$</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="prompt input_prompt">In&nbsp;[51]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">r_DA_range_nm</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mf">0.1</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="n">num</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
@@ -13508,7 +13508,7 @@ $$</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="prompt input_prompt">In&nbsp;[52]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">FRET_efficiencies_list</span> <span class="o">=</span> <span class="p">[]</span>
@@ -13525,7 +13525,7 @@ $$</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[49]:</div>
+<div class="prompt input_prompt">In&nbsp;[53]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">clf</span><span class="p">()</span>
@@ -13572,6 +13572,166 @@ $$</p>
 
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Break-even-point">Break-even point<a class="anchor-link" href="#Break-even-point">&#182;</a></h1><p>Finally, we wish to compare direct excitation of the two-photon absorption of the NV center at 1064 nm with the indirect excitation of the NV center via FRET from the $\mathrm{WS_2}$ two-photon absorption. The $\mathrm{WS_2}$ two-photon absorption cross section is about four orders of magnitude larger than that of the NV center.</p>
+<p>The FRET efficiency drops off as a function of distance, and once we reach the distance where the FRET efficiency is the ratio of the absorption coefficients, i.e. $\approx 1 \times 10^{-4}$, then we have reached the "break-even" point where FRET becomes equally as inefficient as direct excitation.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>To do this, we will need $r_{DA}$ in terms of $E$ and $R_0$, i.e.</p>
+<p>$$
+r_{DA} = R_0 \left(\frac{1-E}{E}\right)^{1/6}
+$$</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We will also need $E$ from the ratio of the two-photon cross sections,</p>
+<p>$$
+E = \frac{ \sigma^{(2)}_{A}}
+         { \sigma^{(2)}_{B}}
+$$
+where $\sigma^{(2)}_{A}$ and $\sigma^{(2)}_{B}$ are the two-photon absorption cross-sections of the NV-center and the $\mathrm{WS_2}$ film respectively, generally in units of $\mathrm{cm^4 s/photon}$. Note that $\sigma^{(2)}$ depends on the wavelength</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>From <a href="https://doi.org/10.1021/jp073938o">Wee et al. 2007</a> we have $\sigma^{(2)}_{A} = (0.45 \pm 0.23) \times 10^{-50} \mathrm{cm^4} \cdot \mathrm{s / photon}$ for the NV center, measured at a wavelengths of 1064 nm against a Rhodamine B standard.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>From <a href="https://doi.org/10.1021/acsnano.5b03480">Zhang et al. 2015</a> we have $\mathrm{WS_2}$, we have the two-photon absorption coefficient $\beta = 1.0 \pm 0.8 \times 10^4 \mathrm{cm/GW}$, measured at 1030 nm via fitting Z-scan curves. To transform this into an absorption cross section, we use
+$$
+\sigma^{(2)} = \frac{\varepsilon}{N} \beta
+$$
+where $\sigma^{(2)}$ is the two-photon absorption cross-section at a given wavelength, $\varepsilon = \frac{h c}{\lambda}$ is the energy of a single photon at that same wavelength, $N$ is the number density of active atoms, and $\beta$ is the two-photon absorption coefficient (also at the same wavelength).</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>From <a href="https://doi.org/10.1364/OE.26.016093">Zhou et al. 2018</a> we have $N = 1.88 \times 10^{22} \, \mathrm{cm^{-3}}$, so we find
+\begin{align*}
+\sigma^{(2)} &amp;= \frac{h c}{\lambda N} \beta \\
+             &amp;= \frac{h c}{1030 nm \cdot 1.88 \times 10^{22} \mathrm{cm}^{-3}} 1.0 \pm 0.8 \times 10^4 \mathrm{cm/GW} \\
+             &amp;= 1.03 \times 10^{-46} \mathrm{cm^4 s/photon}
+\end{align*}</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[54]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">get_sigma_TPA</span><span class="p">(</span><span class="n">beta_cm_per_GW</span><span class="p">,</span> <span class="n">N_per_cm3</span><span class="p">,</span> <span class="n">wavelength_nm</span><span class="p">):</span>
+    <span class="n">h</span> <span class="o">=</span> <span class="mf">6.62607015e-34</span> <span class="c1"># J s</span>
+    <span class="n">m_to_cm</span> <span class="o">=</span> <span class="mf">1e2</span>
+    <span class="n">c</span> <span class="o">=</span> <span class="mi">299792458</span><span class="o">*</span><span class="n">m_to_cm</span> <span class="c1"># cm/s</span>
+    <span class="n">nm_to_cm</span> <span class="o">=</span> <span class="mf">1e-7</span>
+    <span class="n">E</span> <span class="o">=</span> <span class="n">h</span><span class="o">*</span><span class="n">c</span><span class="o">/</span><span class="p">(</span><span class="n">wavelength_nm</span><span class="o">*</span><span class="n">nm_to_cm</span><span class="p">)</span> <span class="c1"># J</span>
+    <span class="n">GW_to_W</span> <span class="o">=</span> <span class="mf">1e-9</span>
+    <span class="n">beta</span> <span class="o">=</span> <span class="n">beta_cm_per_GW</span><span class="o">*</span><span class="n">GW_to_W</span> <span class="c1"># cm/W</span>
+    <span class="c1"># N is already in cm^{-3}</span>
+    <span class="n">sigma_TPA</span> <span class="o">=</span> <span class="n">E</span> <span class="o">*</span> <span class="n">beta</span> <span class="o">/</span> <span class="n">N_per_cm3</span> <span class="c1"># cm^4 s</span>
+    <span class="k">return</span> <span class="n">sigma_TPA</span>
+
+<span class="n">sigma_TPA_NV</span> <span class="o">=</span> <span class="mf">0.45e-50</span> <span class="c1"># cm^4 s/photon</span>
+<span class="n">sigma_TPA_WS2</span> <span class="o">=</span> <span class="n">get_sigma_TPA</span><span class="p">(</span><span class="n">beta_cm_per_GW</span> <span class="o">=</span> <span class="mf">1.0e4</span><span class="p">,</span> <span class="n">N_per_cm3</span> <span class="o">=</span> <span class="mf">1.88e22</span><span class="p">,</span> <span class="n">wavelength_nm</span> <span class="o">=</span> <span class="mi">1030</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;σ_TPA_NV- = </span><span class="si">{:.2e}</span><span class="s2"> cm⁴ s/photon&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">sigma_TPA_NV</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;σ_TPA_WS2 = </span><span class="si">{:.2e}</span><span class="s2"> cm⁴ s/photon&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">sigma_TPA_WS2</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>σ_TPA_NV- = 4.50e-51 cm⁴ s/photon
+σ_TPA_WS2 = 1.03e-46 cm⁴ s/photon
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[62]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">E_choice</span> <span class="o">=</span> <span class="n">sigma_TPA_NV</span> <span class="o">/</span> <span class="n">sigma_TPA_WS2</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">E_choice</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">get_r_DA</span><span class="p">(</span><span class="n">E</span><span class="p">,</span> <span class="n">R_0</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">R_0</span><span class="o">*</span><span class="p">((</span><span class="mi">1</span><span class="o">-</span><span class="n">E</span><span class="p">)</span><span class="o">/</span><span class="n">E</span><span class="p">)</span><span class="o">**</span><span class="p">(</span><span class="mf">1.</span><span class="o">/</span><span class="mf">6.</span><span class="p">)</span>
+
+<span class="n">r_DA_breakeven</span> <span class="o">=</span> <span class="n">get_r_DA</span><span class="p">(</span><span class="n">E_choice</span><span class="p">,</span> <span class="n">R_0_nm</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;r_DA = </span><span class="si">{}</span><span class="s2"> &quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">r_DA_breakeven</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>4.3866284946253655e-05
+15.672104823189358
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
     </div>
   </div>
