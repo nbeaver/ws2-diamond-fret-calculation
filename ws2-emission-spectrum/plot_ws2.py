@@ -10,15 +10,17 @@ def main():
     plt.scatter(x, y)
     plt.xlabel("Photon Energy (eV)")
     plt.ylabel("Intensity (Counts)")
-    plt.savefig("WS2_monolayer_spectrum.png")
+    plt.savefig("WS2_monolayer_spectrum.png", dpi=300)
+    plt.savefig("WS2_monolayer_spectrum.eps")
     plt.clf()
 
     hc = 1239.8 # eV nm
     x_nm = hc/x # nm
-    plt.scatter(x_nm, y)
+    plt.scatter(x_nm, y, color="blue")
     plt.xlabel("Photon wavelength (nm)")
     plt.ylabel("Intensity (Counts)")
-    plt.savefig("WS2_monolayer_spectrum_nm.png")
+    plt.savefig("WS2_monolayer_spectrum_nm.png", dpi=300)
+    plt.savefig("WS2_monolayer_spectrum_nm.eps")
 
 
 if __name__ == '__main__':
