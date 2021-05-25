@@ -4,7 +4,7 @@
 # # Estimation of FRET efficiency for emission from quantum dots and absorption by diamond NV- center.
 # 
 
-# In[11]:
+# In[1]:
 
 
 import math
@@ -17,13 +17,13 @@ import IPython.display
 
 # From [Meiling et al. 2018](https://doi.org/10.1021/acs.jpcc.7b12345) we have Figure 2 showing the steady-state photoluminescence emission spectroscopy:
 
-# In[12]:
+# In[2]:
 
 
 IPython.display.Image(filename="meiling2018fig2.png")
 
 
-# In[13]:
+# In[3]:
 
 
 qd525_nm, qd525_intensity = np.loadtxt("QD525.csv", delimiter=',', unpack=True)
@@ -46,7 +46,7 @@ plt.legend(loc="upper right", bbox_to_anchor=(1.25,1));
 
 # ## NV- center absorption spectrum
 
-# In[14]:
+# In[4]:
 
 
 nv_center_emission_nm, nv_center_emission_intensity, _, _, _, _ = np.loadtxt("../NV_center_emission.txt", unpack=True)
@@ -63,13 +63,13 @@ plt.ylabel("Emission intensity (a.u.)");
 
 # Since this is the emission spectrum of the diamond NV- center, not the absorption / excitation spectrum, we will need to flip the spectrum around the zero phonon line at 637 nm to approximate the absorption spectrum.
 
-# In[15]:
+# In[ ]:
 
 
 nv_center_absorption_nm = 637 - (nv_center_emission_nm - 637)
 
 
-# In[16]:
+# In[ ]:
 
 
 plt.clf()
@@ -79,22 +79,27 @@ plt.vlines(x=637, ymin=0, ymax=max(nv_center_emission_intensity), color="red", l
 plt.vlines(x=532, ymin=0, ymax=max(nv_center_emission_intensity), color="green", label="excitation wavelength (532 nm)")
 plt.legend(loc="center right", bbox_to_anchor=(1.65,0.8))
 plt.xlabel("Photon wavelength (nm)")
-plt.ylabel("Intensity (a.u.)")
+plt.ylabel("Intensity (a.u.)");
+
+
+# In[ ]:
+
+
 plt.savefig("NV_emission_flipped_around_ZPL.eps", bbox_inches="tight")
 plt.savefig("NV_emission_flipped_around_ZPL.png", dpi=300, bbox_inches="tight");
 
 
 # Compare the [image](https://commons.wikimedia.org/wiki/File:NVple.JPG) from the [Wikipedia page for NV centers](https://en.wikipedia.org/wiki/Nitrogen-vacancy_center):
 
-# In[17]:
+# In[ ]:
 
 
-IPython.display.Image(filename="../NVple.JPG")
+IPython.display.Image(filename="../nv-center-excitation-spectrum/NVple.JPG")
 
 
 # The NV- spectrum has a one-photon absorption cross section specified at 532 nm, so we should normalize the spectrum so that it has the correct absorption at that value.
 
-# In[18]:
+# In[ ]:
 
 
 i_closest_to_532nm = np.abs(532 - nv_center_absorption_nm).argmin()
@@ -102,7 +107,7 @@ intensity_closest_to_532nm = nv_center_emission_intensity[i_closest_to_532nm]
 nv_center_absorption_intensity = nv_center_emission_intensity/intensity_closest_to_532nm
 
 
-# In[19]:
+# In[ ]:
 
 
 plt.clf()
@@ -112,14 +117,19 @@ plt.vlines(x=637, ymin=0, ymax=max(nv_center_absorption_intensity), color="red",
 plt.vlines(x=532, ymin=0, ymax=max(nv_center_absorption_intensity), color="green", label="excitation wavelength (532 nm)")
 plt.legend(loc="center right", bbox_to_anchor=(1.8,0.9))
 plt.xlabel("Photon wavelength (nm)")
-plt.ylabel("Intensity (a.u.)")
+plt.ylabel("Intensity (a.u.)");
+
+
+# In[ ]:
+
+
 plt.savefig("NV_absorption_normalized.eps", bbox_inches="tight")
 plt.savefig("NV_absorption_normalized.png", dpi=300, bbox_inches="tight");
 
 
 # Now let's see what the quantum dot emission spectra look like overlaid on the NV- center absorption spectrum.
 
-# In[20]:
+# In[ ]:
 
 
 plt.clf()
@@ -132,13 +142,18 @@ plt.scatter(nv_center_absorption_nm, nv_center_absorption_intensity/nv_center_ab
 plt.xlabel("Photon wavelength (nm)")
 plt.legend(loc="best", bbox_to_anchor=(1.5,0.9));
 plt.ylabel("Normalized intensity");
+
+
+# In[ ]:
+
+
 plt.savefig("NV_QD_all_spectra.eps", bbox_inches="tight")
 plt.savefig("NV_QD_all_spectra.png", dpi=300, bbox_inches="tight");
 
 
 # ## Overlap integral
 
-# In[21]:
+# In[ ]:
 
 
 def overlap_OLI(
@@ -183,7 +198,7 @@ def overlap_OLI(
 # 
 # $$\epsilon_A = \frac{N_A}{\ln 10} \sigma$$
 
-# In[22]:
+# In[ ]:
 
 
 nv_center_absorption_cross_section = 3.1e-17 # cm^2/defect
@@ -194,7 +209,9 @@ molar_attenuation_coefficient = molar_attenuation_coefficient_raw*cm2_per_mol_to
 print("{:.3g} M^-1 cm^-1".format(molar_attenuation_coefficient))
 
 
-# In[23]:
+# Now that we know the molar attenuation coefficient, we can calculate the overlap with the proper units for each quantum dot.
+
+# In[ ]:
 
 
 lambda_J_525, J_OLI_525 = overlap_OLI(
@@ -233,7 +250,7 @@ lambda_J_705, J_OLI_705 = overlap_OLI(
     molar_attenuation_coefficient)
 
 
-# In[24]:
+# In[ ]:
 
 
 J_sum_OLI_525 = J_OLI_525.sum()
@@ -252,7 +269,7 @@ J_sum_OLI_705 = J_OLI_705.sum()
 print("J_705 = {:.3g} * 10^14 M^-1 cm^-1 nm^4 (OLI)".format(J_sum_OLI_705))
 
 
-# In[25]:
+# In[ ]:
 
 
 plt.clf()
@@ -269,7 +286,7 @@ plt.xlabel("Photon wavelength (nm)");
 # 
 # Now that we have the overlap integral, we can calculate the Förster distance from a few other parameters of the host material.
 
-# In[26]:
+# In[ ]:
 
 
 def forster_distance_OLI(kappa2, Phi_D, J, n):
@@ -299,7 +316,7 @@ def forster_distance_OLI(kappa2, Phi_D, J, n):
 # r_{DA} = R_0 \left(\frac{1-E}{E}\right)^{1/6}
 # $$
 
-# In[27]:
+# In[ ]:
 
 
 def get_r_DA(E, R_0):
@@ -316,7 +333,7 @@ def get_r_DA(E, R_0):
 
 # From [Wee et al. 2007](https://doi.org/10.1021/jp073938o) we have $\sigma^{(2)}_{A} = (0.45 \pm 0.23) \times 10^{-50} \mathrm{cm^4} \cdot \mathrm{s / photon}$ for the NV center, measured at a wavelengths of 1064 nm against a Rhodamine B standard.
 
-# In[28]:
+# In[ ]:
 
 
 sigma_TPA_NV = 0.45 # 1e-50 cm^4 s/photon
@@ -350,7 +367,7 @@ print("σ_TPA_NV- = {} × 10⁻⁵⁰ cm⁴ s/photon".format(sigma_TPA_NV))
 # |940 |21                     |870  |11400|23300|86700|64100|
 # |960 |15                     |420  |14300|47900|99800|63500|
 
-# In[29]:
+# In[ ]:
 
 
 absorp_QD525 = {
@@ -431,7 +448,7 @@ absorp_QD705 = {
 
 # We can assume the $\sigma^{(2)}_{A}$ for the NV- center does not change much with wavelength, and tune to the excitation wavelength that gives the largest two-photon absorption cross-section for each type of quantum dot. For most of them, this is at the largest measured wavelength (960 nm).
 
-# In[30]:
+# In[ ]:
 
 
 absorp_QD525_max_nm = max(absorp_QD525, key=absorp_QD525.get)
@@ -441,7 +458,7 @@ absorp_QD655_max_nm = max(absorp_QD655, key=absorp_QD655.get)
 absorp_QD705_max_nm = max(absorp_QD705, key=absorp_QD705.get)
 
 
-# In[31]:
+# In[ ]:
 
 
 sigma_TPA_QD525 = max(absorp_QD525.values())
@@ -451,7 +468,7 @@ sigma_TPA_QD655 = max(absorp_QD655.values())
 sigma_TPA_QD705 = max(absorp_QD705.values())
 
 
-# In[32]:
+# In[ ]:
 
 
 print("Type\tλ (nm)\tσ_2PA (GM)")
@@ -464,7 +481,7 @@ print("QD705\t{}\t{}".format(absorp_QD705_max_nm, sigma_TPA_QD705))
 
 # For comparison, note that WS<sub>2</sub> has $σ_{2PA}$ = 10,000 GM at 1030 nm. (See [other notebook](../ws2_diamond_fret/WS2_NV-_center_FRET_estimation.html) for calculations and [source](https://doi.org/10.1021/acsnano.5b03480).)
 
-# In[33]:
+# In[ ]:
 
 
 # quantum yield of the quantum dots varies,
@@ -481,7 +498,7 @@ n_diamond = 2.417 # index of refraction of diamond
 # TODO: check this assumption for 740, 920, 960 nm.
 
 
-# In[34]:
+# In[ ]:
 
 
 R_0_nm_range_525 = forster_distance_OLI(kappa2, Phi_D_range, J = J_sum_OLI_525, n = n_diamond)
@@ -491,7 +508,7 @@ R_0_nm_range_655 = forster_distance_OLI(kappa2, Phi_D_range, J = J_sum_OLI_655, 
 R_0_nm_range_705 = forster_distance_OLI(kappa2, Phi_D_range, J = J_sum_OLI_705, n = n_diamond)
 
 
-# In[36]:
+# In[ ]:
 
 
 E_ratio_525 = sigma_TPA_NV / sigma_TPA_QD525
@@ -501,7 +518,7 @@ E_ratio_655 = sigma_TPA_NV / sigma_TPA_QD655
 E_ratio_705 = sigma_TPA_NV / sigma_TPA_QD705
 
 
-# In[37]:
+# In[ ]:
 
 
 r_DA_breakeven_525 = get_r_DA(E_ratio_525, R_0_nm_range_525)
@@ -511,7 +528,7 @@ r_DA_breakeven_655 = get_r_DA(E_ratio_655, R_0_nm_range_655)
 r_DA_breakeven_705 = get_r_DA(E_ratio_705, R_0_nm_range_705)
 
 
-# In[44]:
+# In[ ]:
 
 
 plt.clf()
@@ -526,7 +543,7 @@ plt.xlabel("$\Phi_D$ (dimensionless)")
 plt.ylabel("$r_{DA}$ (nm)");
 
 
-# In[43]:
+# In[ ]:
 
 
 plt.savefig("break-even_distance.eps", bbox_inches="tight");
