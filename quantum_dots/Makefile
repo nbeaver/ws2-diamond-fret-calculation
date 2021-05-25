@@ -1,4 +1,5 @@
 IPYNB :=quantum_dots_NV-_center_FRET_estimation.ipynb
+HTML  :=quantum_dots_NV-_center_FRET_estimation.html
 PY    :=$(patsubst %.ipynb,%.html, $(IPYNB))
 PY    :=$(patsubst %.ipynb,%.py, $(IPYNB))
 PDF   :=$(patsubst %.ipynb,%.pdf, $(IPYNB))

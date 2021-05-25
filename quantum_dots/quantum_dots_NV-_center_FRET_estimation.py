@@ -511,7 +511,7 @@ r_DA_breakeven_655 = get_r_DA(E_ratio_655, R_0_nm_range_655)
 r_DA_breakeven_705 = get_r_DA(E_ratio_705, R_0_nm_range_705)
 
 
-# In[41]:
+# In[44]:
 
 
 plt.clf()
@@ -526,10 +526,10 @@ plt.xlabel("$\Phi_D$ (dimensionless)")
 plt.ylabel("$r_{DA}$ (nm)");
 
 
-# In[39]:
+# In[43]:
 
 
-plt.savefig("break-even_distance.eps", bbox_inches="tight")
+plt.savefig("break-even_distance.eps", bbox_inches="tight");
 plt.savefig("break-even_distance.png", dpi=300, bbox_inches="tight");
 
 

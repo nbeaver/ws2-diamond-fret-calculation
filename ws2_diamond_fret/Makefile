@@ -1,5 +1,5 @@
 IPYNB :=WS2_NV-_center_FRET_estimation.ipynb
-HTML  :=index.html
+HTML  :=WS2_NV-_center_FRET_estimation.html
 PY    :=$(patsubst %.ipynb,%.py, $(IPYNB))
 PDF   :=$(patsubst %.ipynb,%.pdf, $(IPYNB))
 
