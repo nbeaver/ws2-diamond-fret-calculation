@@ -462,7 +462,7 @@ print("QD655\t{}\t{}".format(absorp_QD655_max_nm, sigma_TPA_QD655))
 print("QD705\t{}\t{}".format(absorp_QD705_max_nm, sigma_TPA_QD705))
 
 
-# For comparison, note that WS<sub>2</sub> has $σ_{2PA}$ = 10,000 GM at 1030 nm. (See other notebook for calculations and [source](https://doi.org/10.1021/acsnano.5b03480).)
+# For comparison, note that WS<sub>2</sub> has $σ_{2PA}$ = 10,000 GM at 1030 nm. (See [other notebook](../ws2_diamond_fret/WS2_NV-_center_FRET_estimation.html) for calculations and [source](https://doi.org/10.1021/acsnano.5b03480).)
 
 # In[33]:
 
