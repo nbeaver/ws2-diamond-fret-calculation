@@ -1,4 +1,5 @@
-*.png
 *.pdf
-*.ppm
-*.eps
+WS2_monolayer_spectrum.eps
+WS2_monolayer_spectrum.png
+WS2_monolayer_spectrum_nm.eps
+WS2_monolayer_spectrum_nm.png
