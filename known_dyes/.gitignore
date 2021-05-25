@@ -1,5 +1,3 @@
 *.zip
 *.pdf
-FRET_estimation_known_dyes.html
-FRET_estimation_known_dyes.py
 .ipynb_checkpoints/
