@@ -12902,7 +12902,7 @@ $\epsilon_A(\lambda_i)$ is the molar attenuation coefficient at $\lambda_i$, and
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[41]:</div>
+<div class="prompt input_prompt">In&nbsp;[69]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">clf</span><span class="p">()</span>
@@ -12914,7 +12914,8 @@ $\epsilon_A(\lambda_i)$ is the molar attenuation coefficient at $\lambda_i$, and
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Photon wavelength (nm)&quot;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Intensity (a.u.)&quot;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s2">&quot;NV_emission_flipped_around_ZPL.eps&quot;</span><span class="p">,</span> <span class="n">bbox_inches</span><span class="o">=</span><span class="s2">&quot;tight&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s2">&quot;NV_emission_flipped_around_ZPL.png&quot;</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span> <span class="n">bbox_inches</span><span class="o">=</span><span class="s2">&quot;tight&quot;</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s2">&quot;NV_emission_flipped_around_ZPL.png&quot;</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span> <span class="n">bbox_inches</span><span class="o">=</span><span class="s2">&quot;tight&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 
 </div>
@@ -13728,7 +13729,7 @@ where $\sigma^{(2)}$ is the two-photon absorption cross-section at a given wavel
 <p>From <a href="https://doi.org/10.1364/OE.26.016093">Zhou et al. 2018</a> we have $N = 1.88 \times 10^{22} \, \mathrm{cm^{-3}}$, so we find
 \begin{align*}
 \sigma^{(2)} &amp;= \frac{h c}{\lambda N} \beta \\
-             &amp;= \frac{h c}{1030 nm \cdot 1.88 \times 10^{22} \mathrm{cm}^{-3}} 1.0 \pm 0.8 \times 10^4 \mathrm{cm/GW} \\
+             &amp;= \frac{h c}{1030 \, \mathrm{nm} \cdot 1.88 \times 10^{22} \mathrm{cm}^{-3}} 1.0 \pm 0.8 \times 10^4 \mathrm{cm/GW} \\
              &amp;= 1.03 \times 10^{-46} \mathrm{cm^4 s/photon}
 \end{align*}</p>
 
